@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  # Chat streaming and PDF parsing can run longer than the default
+  node_bundler = "esbuild"
+
+[functions."api/upload"]
+  # PDF parsing + embedding can take a while for big files
+  timeout = 60
+
+[functions."api/chat"]
+  # Streaming response time
+  timeout = 60
