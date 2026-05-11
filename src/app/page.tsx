@@ -24,6 +24,15 @@ export default function HomePage() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
+              <Button asChild variant="outline" size="lg">
+                <a
+                  href="https://github.com/abdullahzeb11/ai-doc-qa"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Source
+                </a>
+              </Button>
             </div>
           </div>
         </section>
